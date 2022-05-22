@@ -1,10 +1,13 @@
 # Clique cover
 
-```$ ./a.out [-r rep] [-o file.out] file.col```
+This is greedy clique cover algorithm.
 
-- __file.col__ - Input col file ([DIMACS graph format](http://lcs.ios.ac.cn/~caisw/Resource/about_DIMACS_graph_format.txt))
-- __rep__ - Repetition  
-- __file.out__ - Output clique cover file
+- ```$ ./a.out [-r rep] [-o file.out] file.col```
+
+    - __file.col__ - Input col file ([DIMACS graph format](http://lcs.ios.ac.cn/~caisw/Resource/about_DIMACS_graph_format.txt))  
+    Edge number must be more than or equal to 1.
+    - __rep__ - Repetition  
+    - __file.out__ - Output clique cover file
 
 - col file example
     ```:example.col
