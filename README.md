@@ -6,5 +6,3 @@
 - __rep__ - Repetition  
 - __file.out__ - Output clique cover file
 
-## .col format - [DIMACS graph format](http://lcs.ios.ac.cn/~caisw/Resource/about_DIMACS_graph_format.txt)
-
