@@ -11,17 +11,16 @@ vector< vector<int> > clique_cover(Graph graph, int repetition){
 }
 
 vector< vector<int> > clique_cover(Graph graph, int repetition, int seed){
-    // return greedy(graph, repetition, seed);
+    return greedy(graph, repetition, seed);
     // return same_degree_random(graph, repetition, seed);
     // return first_random(graph, repetition, seed);
-    return first_ascending(graph, repetition, seed);
+    // return first_ascending(graph, repetition, seed);
 }
 
 vector< vector< vector<int> > > multi_clique_cover(Graph graph, int repetition, int seed, int cc_num){
     vector< vector< vector<int> > > res;
     srand(seed);
-    if(cc_num == 2) res = {greedy(graph, repetition, rand()), first_ascending(graph, repetition, rand())};
-    else for(int i=0; i<cc_num; ++i) res.push_back(clique_cover(graph, repetition, rand()));
+    for(int i=0; i<cc_num; ++i) res.push_back(clique_cover(graph, repetition, rand()));
     return res;
 }
 

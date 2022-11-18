@@ -2,12 +2,12 @@
 
 This is greedy clique cover algorithm.
 
-- ```$ ./a.out [-r rep] [-o file.out] file.col```
-
+- ```$ ./clique_cover [-r rep] [-s seed] [-o file.out] file.col```
     - __file.col__ - Input col file ([DIMACS graph format](http://lcs.ios.ac.cn/~caisw/Resource/about_DIMACS_graph_format.txt))  
     Edge number must be more than or equal to 1.
-    - __rep__ - Repetition  
+    - __rep__ - Repetition
     - __file.out__ - Output clique cover file
+    - __seed_ - Seed value
 
 - col file example
     ```:example.col
