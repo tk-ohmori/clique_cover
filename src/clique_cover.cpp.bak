@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;
 
@@ -50,6 +50,10 @@ vector< vector<int> > get_clique(int repetition, string file_name){
         if(str[0]=='p') {
             deleteNl2(str);
             regex_match(str,results,regex("p\\s+?(edges?\\s+?)?(\\d+)\\s+?\\d+.*"));
+            if(results.size()<3){
+                cout<<"Invalid format: "<<str<<endl;
+                exit(-1);
+            }
             v = stoi(results[2].str());
             break;
         }
@@ -68,8 +72,16 @@ vector< vector<int> > get_clique(int repetition, string file_name){
         if(str[0]=='e'){
             deleteNl2(str);
             vector<string> line = split(str,' ');
+            if(line.size()<3){
+                cout<<"Invalid format: "<<str<<endl;
+                exit(-1);
+            }
             int x = stoi(line[1])-1;
             int y = stoi(line[2])-1;
+            if(x>=v || y>=v){
+                cout<<"Invalid Node: "<<str<<endl;
+                exit(-1);
+            }
             graph[x].insert(y);
             graph[y].insert(x);
             --degree[x].first;
